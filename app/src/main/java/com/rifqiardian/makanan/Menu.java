@@ -148,8 +148,8 @@ public class Menu extends AppCompatActivity {
     public void minAir(){
         if(Integer.valueOf(Air.getText().toString()) > 0){
             int harga = -3000;
-            JumlahTeh -=1;
-            Teh.setText(""+JumlahTeh);
+            JumlahAir-=1;
+            Air.setText(""+JumlahAir);
             setTextTotalHarga(totalHarga(harga));
         }
         else{
@@ -162,7 +162,7 @@ public class Menu extends AppCompatActivity {
     public void minTeh(){
         if(Integer.valueOf(Teh.getText().toString()) > 0){
             int harga = -5000;
-            JumlahAir -= 1;
+            JumlahTeh -= 1;
             Teh.setText(""+JumlahTeh);
             setTextTotalHarga(totalHarga(harga));
         }
