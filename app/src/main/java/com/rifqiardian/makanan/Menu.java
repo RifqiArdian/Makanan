@@ -105,7 +105,7 @@ public class Menu extends AppCompatActivity {
     @OnClick(R.id.minGeprek)
     public void minGeprek(){
         if(Integer.valueOf(AyamGeprek.getText().toString()) > 0){
-            int harga = -3000;
+            int harga = -25000;
             JumlahGeprek -=1;
             AyamGeprek.setText(""+JumlahGeprek);
             setTextTotalHarga(totalHarga(harga));
