@@ -6,25 +6,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import butterknife.BindView;
+import butterknife.ButterKnife;
+import butterknife.OnClick;
 
 public class Pesanan extends AppCompatActivity {
-    int Jml;
+    @BindView(R.id.Jumlah)
+    TextView jml;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pesanan);
-        TextView Jumlah = findViewById(R.id.Jumlah);
-        Button btnSelesai = findViewById(R.id.btnSelesai);
-        Bundle bundle = getIntent().getExtras();
-        int Jml = bundle.getInt("totalHarga",0);
+        ButterKnife.bind(this);
 
-        Jumlah.setText(String.valueOf(Jml));
-        btnSelesai.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent i = new Intent(Pesanan.this,Thanks.class);
-                startActivity(i);
-            }
-        });
+        jml.setText("Rp."+getIntent().getStringExtra("totalHarga"));
+
+    }
+    @OnClick(R.id.btnSelesai)
+    public void btnSelesai(){
+        Intent i = new Intent(getApplicationContext(), Thanks.class);
+        startActivity(i);
     }
 }
