@@ -64,7 +64,7 @@ public class Menu extends AppCompatActivity {
 
     @OnClick(R.id.plusBakar)
     public void plusBakar(){
-        int harga = 25000;
+        int harga = 20000;
         JumlahBakar +=1;
         AyamBakar.setText(""+JumlahBakar);
         setTextTotalHarga(totalHarga(harga));
