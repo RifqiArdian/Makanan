@@ -162,7 +162,7 @@ public class Menu extends AppCompatActivity {
     public void minTeh(){
         if(Integer.valueOf(Teh.getText().toString()) > 0){
             int harga = -5000;
-            JumlahTeh -= 1;
+            JumlahAir -= 1;
             Teh.setText(""+JumlahTeh);
             setTextTotalHarga(totalHarga(harga));
         }
