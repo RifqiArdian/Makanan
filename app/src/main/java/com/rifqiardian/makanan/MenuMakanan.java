@@ -14,7 +14,7 @@ import butterknife.OnClick;
 
 
 
-public class Menu extends AppCompatActivity {
+public class MenuMakanan extends AppCompatActivity {
     @BindView(R.id.jmlGeprek)
     TextView AyamGeprek;
     @BindView(R.id.jmlBakar)
