@@ -3,6 +3,8 @@ package com.rifqiardian.makanan;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.ContextMenu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -43,6 +45,51 @@ public class MenuMakanan extends AppCompatActivity {
         JumlahTeh = 0;
         JumlahKopi = 0;
 
+        registerForContextMenu(AyamGeprek);
+        registerForContextMenu(AyamBakar);
+        registerForContextMenu(AyamGoreng);
+        registerForContextMenu(Teh);
+        registerForContextMenu(Kopi);
+        registerForContextMenu(Air);
+
+    }
+
+    @Override
+    public void onCreateContextMenu(ContextMenu menu, View v, ContextMenu.ContextMenuInfo menuInfo) {
+        super.onCreateContextMenu(menu, v, menuInfo);
+        menu.add(0,v.getId(),0,"1");
+        menu.add(0,v.getId(),0,"2");
+        menu.add(0,v.getId(),0,"3");
+        menu.add(0,v.getId(),0,"4");
+        menu.add(0,v.getId(),0,"5");
+    }
+
+    @Override
+    public boolean onContextItemSelected(MenuItem item) {
+
+        if (item.getItemId() == R.id.jmlGeprek) {
+            AyamGeprek.setText(item.getTitle().toString());
+        } else if ((item.getItemId() == R.id.jmlBakar)) {
+            AyamBakar.setText(item.getTitle().toString());
+
+        }
+        else if ((item.getItemId() == R.id.jmlGoreng)) {
+            AyamGoreng.setText(item.getTitle().toString());
+
+        }
+        else if ((item.getItemId() == R.id.jmlKopi)) {
+            Kopi.setText(item.getTitle().toString());
+
+        }
+        else if ((item.getItemId() == R.id.jmlTeh)) {
+            Teh.setText(item.getTitle().toString());
+
+        }
+        else if ((item.getItemId() == R.id.jmlAir)) {
+            Air.setText(item.getTitle().toString());
+
+        }
+        return true;
     }
 
     private int totalHarga(int harga){

@@ -35,6 +35,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/MenuGeprek"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:src="@drawable/ayamgeprek" />
@@ -93,6 +94,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/MenuBakar"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
@@ -152,6 +154,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/MenuGoreng"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
@@ -211,6 +214,7 @@
             android:orientation="horizontal">
 
             <ImageView
+                android:id="@+id/MenuAir"
                 android:layout_width="100dp"
                 android:layout_height="100dp"
                 android:scaleType="centerCrop"
@@ -269,6 +273,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/MenuKopi"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:scaleType="centerCrop"
@@ -327,6 +332,7 @@
         android:orientation="horizontal">
 
         <ImageView
+            android:id="@+id/MenuTeh"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:src="@drawable/airteh" />
